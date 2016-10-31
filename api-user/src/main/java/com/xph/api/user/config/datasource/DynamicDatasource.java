@@ -11,6 +11,7 @@ import java.util.Map;
 /**实现抽象类 AbstractRoutingDataSource
  * 动态获取datasource
  * Created by ${huipei.x} on 2016/8/8.
+ * qq群593802274
  */
 @Primary
 @Configuration

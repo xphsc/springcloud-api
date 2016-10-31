@@ -7,6 +7,7 @@ import java.util.Map;
 
 /**
  * Created by ${huipei.x} on 2016/8/8.
+ * qq群593802274
  */
 public abstract class AbstractDataSourceConfig {
 

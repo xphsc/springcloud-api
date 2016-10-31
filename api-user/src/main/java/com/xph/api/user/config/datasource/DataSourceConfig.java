@@ -10,6 +10,7 @@ import javax.sql.DataSource;
 
 /**
  * Created by ${huipei.x} on 2016/8/8.
+ * qq群593802274
  */
 @Configuration
 public class DataSourceConfig extends AbstractDataSourceConfig{

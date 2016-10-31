@@ -9,6 +9,7 @@ import java.util.Set;
 
 /** 动态获取数据源，本地线程变量
  * Created by ${huipei.x} on 2016/8/8.
+ * qq群593802274
  */
 public class DataSourceContextHolder {
 
