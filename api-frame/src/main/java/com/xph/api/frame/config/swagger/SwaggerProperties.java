@@ -4,7 +4,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Created by ${huipei.x} on 2017-11-10.
+ * Created by ${huipei.x} on 2016/8/8.
+ * qq群593802274
  */
 
 

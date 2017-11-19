@@ -4,7 +4,8 @@ package com.xph.api.user.model.request;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- *  Created by ${huipei.x} on 2017-10-16.
+ * Created by ${huipei.x} on 2016/8/8.
+ * qq群593802274
  */
 
 public class BaseQuery {

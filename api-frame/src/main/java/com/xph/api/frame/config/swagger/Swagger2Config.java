@@ -14,8 +14,9 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-/** 生成API文档配置
- * Created by ${huipei.x} on 2016/9/19.
+/**
+ * Created by ${huipei.x} on 2016/8/8.
+ * qq群593802274
  */
 
 @Configuration
@@ -31,7 +32,8 @@ public class Swagger2Config {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.ovit"))
+                .apis(RequestHandlerSelectors.basePackage("com.xph.api"))
+                .apis(RequestHandlerSelectors.basePackage("com.xph.api"))
                 .paths(PathSelectors.any())
                 .build();
     }

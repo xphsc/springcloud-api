@@ -19,8 +19,11 @@ ribbon:
   eureka:
     enabled: true
 
-zuul.routes.api-a.path: /user/**
-zuul.routes.api-a.serviceId: user
+zuul:
+ routes:
+   api-user:
+      path: /user/**
+      serviceId: user
 hystrix:
   command:
     default:

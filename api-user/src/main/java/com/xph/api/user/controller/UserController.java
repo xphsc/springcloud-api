@@ -2,13 +2,16 @@ package com.xph.api.user.controller;
 
 
 
-import com.xph.api.user.repositories.UserRepository;
+import com.github.pagehelper.PageInfo;
+import com.xph.api.frame.common.Response;
+import com.xph.api.user.model.User;
+import com.xph.api.user.model.request.BaseQuery;
+import com.xph.api.user.repository.dao.UserRepository;
+import com.xph.api.user.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by ${huipei.x} on 2016/8/8.
@@ -20,9 +23,21 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @Autowired
     UserRepository userRepository;
+    @Autowired
+    UserService userService;
     @ApiOperation(value="查询" )
-    @RequestMapping(value = "/find",method = RequestMethod.GET)
+    @GetMapping("find")
     public Object find(){
         return userRepository.findAll();
+    }
+
+    @ApiOperation(value="用户查询列表" )
+    @PostMapping("listUser")
+    public Response listUser(BaseQuery baseQuery){
+        PageInfo<User> pageInfo= userService.listUser(baseQuery);
+        return Response.convertResult(pageInfo.getList(),
+                pageInfo.getPageNum(),
+                pageInfo.getPageSize(),
+                pageInfo.getTotal());
     }
 }

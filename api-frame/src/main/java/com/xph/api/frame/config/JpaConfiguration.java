@@ -4,7 +4,8 @@ package com.xph.api.frame.config;
 
 
 
-import com.xph.api.user.config.datasource.DynamicDatasource;
+
+import com.xph.api.frame.config.datasource.DynamicDatasource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -33,7 +34,7 @@ import java.util.Properties;
 @EnableJpaRepositories(
         entityManagerFactoryRef="entityManagerFactory",
         transactionManagerRef="transactionManager",
-        basePackages= { "com.xph.api.user.*" })
+        basePackages= { "com.xph.api.*.repository.dao" })
 public class JpaConfiguration {
 
     @Autowired
@@ -44,7 +45,7 @@ public class JpaConfiguration {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() throws NamingException{
         LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
         factoryBean.setDataSource(dynamicDatasource);
-        factoryBean.setPackagesToScan(new String[] { "com.xph.api.user.entity" });
+        factoryBean.setPackagesToScan(new String[] { "com.xph.api.*.model" });
         factoryBean.setJpaVendorAdapter(jpaVendorAdapter());
         factoryBean.setJpaProperties(jpaProperties());
 

@@ -2,7 +2,7 @@ package com.xph.api.frame.base;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
-import com.ovit.nswy.frame.common.redis.RedisSerializer;
+import com.xph.api.frame.common.redis.RedisSerializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.RedisCallback;
@@ -14,7 +14,8 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Created by ${huipei.x} on 2017-11-14.
+ * Created by ${huipei.x} on 2016/8/8.
+ * qq群593802274
  */
 @Component
 public class RedisDao {

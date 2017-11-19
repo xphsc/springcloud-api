@@ -10,6 +10,148 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>api-frame</artifactId>
+    <groupId>${parent.groupId}.${parent.artifactId}</groupId>
+    <version>${parent.version}</version>
+    <packaging>jar</packaging>
+    <dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-aop</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <optional>true</optional>
+    </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+    <!-- <dependency>
+         <groupId>org.springframework.session</groupId>
+         <artifactId>spring-session</artifactId>
+     </dependency>-->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-redis</artifactId>
+        <!--<version>1.5.6.RELEASE</version>-->
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-feign</artifactId>
+    </dependency>
+    <!-- <dependency>
+          <groupId>org.springframework.cloud</groupId>
+          <artifactId>spring-cloud-starter-zipkin</artifactId>
+      </dependency>-->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>5.1.44</version>
+    </dependency>
+    <dependency>
+        <groupId>org.mybatis.spring.boot</groupId>
+        <artifactId>mybatis-spring-boot-starter</artifactId>
+        <version>1.3.1</version>
+    </dependency>
 
+    <dependency>
+        <groupId>tk.mybatis</groupId>
+        <artifactId>mapper-spring-boot-starter</artifactId>
+        <version>1.1.4</version>
+    </dependency>
 
+    <dependency>
+        <groupId>com.github.pagehelper</groupId>
+        <artifactId>pagehelper-spring-boot-starter</artifactId>
+        <version>1.2.0</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid</artifactId>
+        <version>1.1.2</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.github.xphsc</groupId>
+        <artifactId>eglsc-helper</artifactId>
+        <version>1.2.1</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.16.12</version>
+    </dependency>
+
+    <dependency>
+        <groupId>commons-fileupload</groupId>
+        <artifactId>commons-fileupload</artifactId>
+        <version>1.3.1</version>
+    </dependency>
+
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.shiro</groupId>
+        <artifactId>shiro-spring</artifactId>
+        <version>1.4.0</version>
+    </dependency>
+
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.12</version>
+    </dependency>
+    <dependency>
+        <groupId>com.belerweb</groupId>
+        <artifactId>pinyin4j</artifactId>
+        <version>2.5.0</version>
+    </dependency>
+    <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger2</artifactId>
+        <version>2.5.0</version>
+    </dependency>
+    <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger-ui</artifactId>
+        <version>2.5.0</version>
+    </dependency>
+    <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt</artifactId>
+        <version>0.9.0</version>
+    </dependency>
+    <dependency>
+        <groupId>com.github.tobato</groupId>
+        <artifactId>fastdfs-client</artifactId>
+        <version>1.25.4-RELEASE</version>
+    </dependency>
+    <dependency>
+        <groupId>javax.mail</groupId>
+        <artifactId>mail</artifactId>
+        <version>1.4.3</version>
+    </dependency>
+    </dependencies>
 </project>

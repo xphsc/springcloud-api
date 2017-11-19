@@ -1,6 +1,7 @@
 package com.xph.api.frame.config.cors;
 
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
+
+import org.springframework.boot.context.embedded.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
@@ -8,12 +9,13 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 /**
- * Created by ${huipei.x} on 2017-11-11.
+ * Created by ${huipei.x} on 2016/8/8.
+ * qq群593802274
  */
 @Configuration
 public class CorsConfig {
     @Bean
-    public FilterRegistrationBean corsFilter() {
+    public org.springframework.boot.context.embedded.FilterRegistrationBean corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);

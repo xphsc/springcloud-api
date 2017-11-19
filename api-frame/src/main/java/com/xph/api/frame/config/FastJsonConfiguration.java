@@ -10,8 +10,10 @@ import org.springframework.context.annotation.Configuration;
 
 
 /**
- * Created by ${huipei.x} on 2016/9/19.
+ * Created by ${huipei.x} on 2016/8/8.
+ * qq群593802274
  */
+
 @Configuration
 @ConditionalOnClass({FastJsonHttpMessageConverter4.class})
 @ConditionalOnProperty(

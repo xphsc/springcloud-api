@@ -25,9 +25,8 @@
             <plugin><!--spring boot打包工具-->
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>1.2.3.RELEASE</version>
                 <configuration>
-                    <mainClass>com.xph.openapi.eureka.Application</mainClass>
+                    <mainClass>com.xph.api.eureka.EurekaApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

@@ -1,17 +1,16 @@
 package com.xph.api.frame.common.redis;
 
 
-
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
 import java.io.*;
 import java.lang.reflect.Method;
 
 /**
- * Created by ${huipei.x} on 2017-11-14.
+ * Created by ${huipei.x} on 2016/8/8.
+ * qq群593802274
  */
-
 public class RedisSerializer {
 
     private static Log logger = LogFactory.getLog(RedisSerializer.class);

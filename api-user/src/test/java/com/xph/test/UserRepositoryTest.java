@@ -1,9 +1,9 @@
 package com.xph.test;
 
 
-import com.xph.api.user.Application;
-import com.xph.api.user.entity.User;
-import com.xph.api.user.repositories.UserRepository;
+import com.xph.api.user.UserApplication;
+import com.xph.api.user.model.User;
+import com.xph.api.user.repository.dao.UserRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ import java.util.List;
  * qq群593802274
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(Application.class)
+@SpringApplicationConfiguration(UserApplication.class)
 public class UserRepositoryTest {
 
     @Autowired

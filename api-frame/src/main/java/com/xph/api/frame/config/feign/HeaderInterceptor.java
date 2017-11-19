@@ -9,8 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Enumeration;
 
 /**
- * Created by ${huipei.x} on 2017-11-11.
+ * Created by ${huipei.x} on 2016/8/8.
+ * qq群593802274
  */
+
 public class HeaderInterceptor  implements RequestInterceptor {
 
     @Override

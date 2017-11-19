@@ -8,7 +8,8 @@ import com.github.xphsc.json.JSONObject;
 import com.github.xphsc.mutable.Integers;
 
 /**
- *  Created by ${huipei.x} on 2017-10-16.
+ * Created by ${huipei.x} on 2016/8/8.
+ * qq群593802274
  */
 public class Response {
 

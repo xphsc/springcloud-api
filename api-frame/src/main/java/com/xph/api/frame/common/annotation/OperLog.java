@@ -3,7 +3,8 @@ package com.xph.api.frame.common.annotation;
 import java.lang.annotation.*;
 
 /**
- * Created by ${huipei.x} on 2017-10-30.
+ * Created by ${huipei.x} on 2016/8/8.
+ * qq群593802274
  */
 @Documented
 @Inherited

@@ -13,16 +13,18 @@
         <module>api-user</module>
         <module>api-config</module>
         <module>api-gateway</module>
+        <module>api-frame</module>
+        <module>api-monitor</module>
     </modules>
     <parent>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-parent</artifactId>
-        <version>Brixton.SR3</version>
+        <version>Camden.SR7</version>
 
     </parent>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.7</java.version>
+        <java.version>1.8</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -44,7 +46,14 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-parent</artifactId>
-                <version>Brixton.SR3</version>
+                <version>Camden.SR7</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>1.5.6.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

@@ -1,7 +1,7 @@
 package com.xph.api.user.repository.dao;
 
 
-import com.xph.api.user.entity.User;
+import com.xph.api.user.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
