@@ -10,7 +10,7 @@ api-gateway 网关
 api-user 用户管理服务
 使用双数据源的使用
 
-
+此项目可作为spring cloud脚手架 开发使用
 
 
 
