@@ -12,6 +12,17 @@ spring:
      url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8
      username: root
      password: root
+ redis:
+          host: localhost
+          password:
+          port: 6379
+          database: 0
+          pool:
+              max-active: 8
+              max-wait: -1
+              max-idle: 20000
+              min-idle: 0
+        timeout: 10000
 springfox:
   name: spring cloud APi
   title: 用户管理在线文档

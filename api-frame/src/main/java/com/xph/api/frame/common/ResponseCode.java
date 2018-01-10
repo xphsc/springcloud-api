@@ -7,10 +7,10 @@ package com.xph.api.frame.common;
 public enum ResponseCode {
 
     OK(200,"OK"),
-    ERROR(400,"ERROR"),
-    NEED_LONGIN(404,"Not Found"),
-    ILLEGLE_ARGUMENT(500,"Internal Server Error"),
-    PARAM_ERROR(10000,"参数异常");
+    BAD_REQUEST(400,"ERROR"),
+    NOT_FOUND(404,"Not Found"),
+    INTERNAL_SERVER_ERROR(500,"Internal Server Error"),
+    PARAM_ERROR(1000,"参数异常");
     private final int code;
     private  final String desc;
 

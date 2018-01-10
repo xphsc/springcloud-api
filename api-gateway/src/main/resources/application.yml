@@ -24,6 +24,9 @@ zuul:
    api-user:
       path: /user/**
       serviceId: user
+      sensitiveHeaders: "*"
+   intelligentsia-authority:
+        sensitiveHeaders : Authorization
 hystrix:
   command:
     default:

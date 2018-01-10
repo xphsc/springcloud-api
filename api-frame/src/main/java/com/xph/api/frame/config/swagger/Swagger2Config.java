@@ -33,7 +33,6 @@ public class Swagger2Config {
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.xph.api"))
-                .apis(RequestHandlerSelectors.basePackage("com.xph.api"))
                 .paths(PathSelectors.any())
                 .build();
     }
