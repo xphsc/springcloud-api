@@ -1,8 +1,11 @@
 package com.xphsc.api.user.service;
 
+
 import com.github.pagehelper.PageInfo;
-import com.xphsc.api.user.model.User;
-import com.xphsc.api.user.model.request.BaseQuery;
+import com.xphsc.api.user.model.request.BaseDTO;
+import com.xphsc.api.user.model.response.UserDTO;
+
+import java.util.List;
 
 /**
  * Created by ${huipei.x} on 2016/8/8.
@@ -10,5 +13,6 @@ import com.xphsc.api.user.model.request.BaseQuery;
  */
 public interface UserService {
 
-    public PageInfo<User> listUser(BaseQuery baseQuery);
+    public PageInfo<UserDTO> listUser(BaseDTO baseDTO);
+    public List<UserDTO> listAllUser();
 }

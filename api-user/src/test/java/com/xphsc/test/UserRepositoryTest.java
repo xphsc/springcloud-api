@@ -3,7 +3,7 @@ package com.xphsc.test;
 
 import com.xphsc.api.user.UserApplication;
 import com.xphsc.api.user.model.User;
-import com.xphsc.api.user.repository.dao.UserRepository;
+import com.xphsc.api.user.repository.dao.UserDao;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ import java.util.List;
 public class UserRepositoryTest {
 
     @Autowired
-    UserRepository userRepository;
+    UserDao userRepository;
 
     @Test
     public void findALL(){
