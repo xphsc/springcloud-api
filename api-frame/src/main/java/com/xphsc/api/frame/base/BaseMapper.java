@@ -1,4 +1,4 @@
-package com.xph.api.frame.base;
+package com.xphsc.api.frame.base;
 
 import tk.mybatis.mapper.common.IdsMapper;
 import tk.mybatis.mapper.common.Mapper;

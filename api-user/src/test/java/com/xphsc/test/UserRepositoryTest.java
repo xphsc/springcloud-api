@@ -1,13 +1,13 @@
-package com.xph.test;
+package com.xphsc.test;
 
 
-import com.xph.api.user.UserApplication;
-import com.xph.api.user.model.User;
-import com.xph.api.user.repository.dao.UserRepository;
+import com.xphsc.api.user.UserApplication;
+import com.xphsc.api.user.model.User;
+import com.xphsc.api.user.repository.dao.UserRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.List;
  * qq群593802274
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(UserApplication.class)
+@SpringBootTest(classes = UserApplication.class)
 public class UserRepositoryTest {
 
     @Autowired

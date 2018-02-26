@@ -1,4 +1,4 @@
-package com.xph.api.frame.common;
+package com.xphsc.api.frame.common;
 
 /**
  * Created by ${huipei.x} on 2016/8/8.

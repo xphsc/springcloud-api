@@ -1,4 +1,4 @@
-package com.xph.api.frame.base;
+package com.xphsc.api.frame.base;
 
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.web.bind.WebDataBinder;

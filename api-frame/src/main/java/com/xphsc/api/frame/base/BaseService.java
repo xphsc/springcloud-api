@@ -1,4 +1,4 @@
-package com.xph.api.frame.base;
+package com.xphsc.api.frame.base;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;

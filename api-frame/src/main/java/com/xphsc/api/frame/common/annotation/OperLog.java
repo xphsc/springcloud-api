@@ -1,4 +1,4 @@
-package com.xph.api.frame.common.annotation;
+package com.xphsc.api.frame.common.annotation;
 
 import java.lang.annotation.*;
 
@@ -10,7 +10,7 @@ import java.lang.annotation.*;
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE,ElementType.METHOD})
-public @interface BaseException {
+public @interface OperLog {
     String value() default "";
     String description()  default "";
 }

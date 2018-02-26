@@ -1,8 +1,8 @@
-package com.xph.api.frame.base;
+package com.xphsc.api.frame.base;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
-import com.xph.api.frame.common.redis.RedisSerializer;
+import com.xphsc.api.frame.common.redis.RedisSerializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.RedisCallback;

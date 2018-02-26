@@ -1,8 +1,9 @@
-package com.xph.api.frame.common;
+package com.xphsc.api.frame.common;
 
 
 
 import com.alibaba.fastjson.annotation.JSONField;
+import com.github.xphsc.date.DateFormat;
 import com.github.xphsc.json.JSONHelper;
 import com.github.xphsc.json.JSONObject;
 import com.github.xphsc.mutable.Integers;
@@ -57,73 +58,68 @@ public class Response {
 
 
     public static Response successResult() {
-        return newInstance(200,ResponseCode.OK.getDesc());
+        return newInstance(200, ResponseCode.OK.getDesc());
     }
     public static Response successResult(Object result) {
-        JSONHelper.DEFFAULT_DATE_FORMAT = "yyyy-MM-dd";
-        return newInstance(200, ResponseCode.OK.getDesc(),JSONHelper.toJSONString(result, JSONHelper.valueFilter, JSONHelper.features));
+        return newInstance(200, ResponseCode.OK.getDesc(),JSONHelper.toJSON(result, DateFormat.DATE_FORMAT_DAY));
     }
 
     public static Response successResult(Object result ,Integer total) {
-        JSONHelper.DEFFAULT_DATE_FORMAT = "yyyy-MM-dd";
-        return newInstance(200, ResponseCode.OK.getDesc(), JSONHelper.toJSONString(result, JSONHelper.valueFilter, JSONHelper.features),total);
+        return newInstance(200,ResponseCode.OK.getDesc(), JSONHelper.toJSON(result, DateFormat.DATE_FORMAT_DAY),total);
     }
 
     public static Response successResult(Object result ,Integer total,String DateFormat) {
-        JSONHelper.DEFFAULT_DATE_FORMAT = DateFormat;
-        return newInstance(200, ResponseCode.OK.getDesc(), JSONHelper.toJSONString(result, JSONHelper.valueFilter, JSONHelper.features), total);
+        return newInstance(200, ResponseCode.OK.getDesc(), JSONHelper.toJSON(result, DateFormat), total);
+    }
+
+    public static Response successResult(int status ,Object result) {
+        return newInstance(status,ResponseCode.OK.getDesc(), JSONHelper.toJSON(result, DateFormat.DATE_FORMAT_DAY));
     }
 
     public static Response successResult(Object result,Object msg) {
-        JSONHelper.DEFFAULT_DATE_FORMAT = "yyyy-MM-dd";
-        return newInstance(200, msg, JSONHelper.toJSONString(result, JSONHelper.valueFilter, JSONHelper.features));
+        return newInstance(200, msg, JSONHelper.toJSON(result, DateFormat.DATE_FORMAT_DAY));
     }
 
-    public static Response jsonResult(Object result,String DateFormat) {
-        JSONHelper.DEFFAULT_DATE_FORMAT = DateFormat;
-        return newInstance(200,ResponseCode.OK.getDesc());
+    public static Response successResult(Object result,String DateFormat) {
+        return newInstance(200, ResponseCode.OK.getDesc(), JSONHelper.toJSON(result, DateFormat));
     }
 
     public static Response convertResult(Object result ,int currentPage,int pageSize ,long total)
     {
-        JSONHelper.DEFFAULT_DATE_FORMAT = "yyyy-MM-dd";
         JSONObject jsonObject=new JSONObject();
         jsonObject.put("currentPage",currentPage);
         jsonObject.put("pageSize",pageSize);
-        return newInstance(200,jsonObject, JSONHelper.toJSONString(result, JSONHelper.valueFilter, JSONHelper.features),total);
+        return newInstance(200, jsonObject, JSONHelper.toJSON(result, DateFormat.DATE_FORMAT_DAY), total);
     }
 
     public static Response convertResult(Object result ,int currentPage,int pageSize ,Integer totalPage)
     {
-        JSONHelper.DEFFAULT_DATE_FORMAT = "yyyy-MM-dd";
         JSONObject jsonObject=new JSONObject();
         jsonObject.put("currentPage",currentPage);
         jsonObject.put("pageSize",pageSize);
         jsonObject.put("totalPage",totalPage);
-        return newInstance(200,jsonObject, JSONHelper.toJSONString(result, JSONHelper.valueFilter, JSONHelper.features));
+        return newInstance(200,jsonObject,JSONHelper.toJSON(result, DateFormat.DATE_FORMAT_DAY));
     }
 
-    public static Response convertResult(Object result ,int currentPage,int pageSize ,Integer total,String DateFormat)
+    public static Response convertResult(Object result ,int currentPage,int pageSize ,long total,String DateFormat)
     {
-        JSONHelper.DEFFAULT_DATE_FORMAT = DateFormat;
-       JSONObject jsonObject=new JSONObject();
+        JSONObject jsonObject=new JSONObject();
         jsonObject.put("currentPage",currentPage);
         jsonObject.put("pageSize",pageSize);
-        return newInstance(200,jsonObject, JSONHelper.toJSONString(result, JSONHelper.valueFilter, JSONHelper.features),total);
+        return newInstance(200,jsonObject,JSONHelper.toJSON(result, DateFormat),total);
     }
 
-    public static Response convertResult(Object result ,int currentPage,int pageSize ,Integer total,long totalPage)
+    public static Response convertResult(Object result ,int currentPage,int pageSize ,long total,long totalPage)
     {
-        JSONHelper.DEFFAULT_DATE_FORMAT = "yyyy-MM-dd";
-       JSONObject jsonObject=new JSONObject();
+        JSONObject jsonObject=new JSONObject();
         jsonObject.put("currentPage",currentPage);
         jsonObject.put("pageSize",pageSize);
         jsonObject.put("totalPage",totalPage);
-        return newInstance(200,jsonObject, JSONHelper.toJSONString(result, JSONHelper.valueFilter, JSONHelper.features),total);
+        return newInstance(200,jsonObject, JSONHelper.toJSON(result, DateFormat.DATE_FORMAT_DAY),total);
     }
 
     public static Response errorResult(Object msg) {
-        return newInstance(ResponseCode.ERROR.getCode(),msg);
+        return newInstance(ResponseCode.INTERNAL_SERVER_ERROR.getCode(),msg);
 
     }
 
@@ -146,7 +142,7 @@ public class Response {
 
     private Object getData(Object result){
         Object data=null;
-            data=JSONHelper.parse(result.toString());
+        data=JSONHelper.parse(result.toString());
         return data;
     }
 
