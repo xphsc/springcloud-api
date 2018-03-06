@@ -9,6 +9,6 @@ import org.springframework.context.annotation.Configuration;
  */
 
 @Configuration
-@MapperScan(basePackages = "com.xph.api.*.mapper",sqlSessionFactoryRef = "sqlSessionFactory")
+@MapperScan(basePackages = "com.xphsc.api.*.mapper",sqlSessionFactoryRef = "sqlSessionFactory")
 public class MapperScanConfig {
 }
