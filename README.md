@@ -29,9 +29,10 @@ Model内成员变量建议与表字段数量对应，
 建议在公司内部使用ShowDoc、SpringFox-Swagger2 、RAP等开源项目来编写、管理API文档
 ```
 ## 技术选型&文档
-
-  ```spring cloud快速微服务开发框架   SpringBoot 快速的java开发框架，大大提高程序员的开发效率
-     MyBatis PageHelper分页插件（查看官方中文文档）
+ ```
+   spring cloud快速微服务开发框架
+    SpringBoot 快速的java开发框架，大大提高程序员的开发效率
+    MyBatis PageHelper分页插件（查看官方中文文档）
 ```
 
 小弟才疏学浅
