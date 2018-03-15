@@ -15,4 +15,6 @@ public interface UserService {
 
     public PageInfo<UserDTO> listUser(BaseDTO baseDTO);
     public List<UserDTO> listAllUser();
+
+
 }

@@ -1,5 +1,5 @@
 server:
-  port: 8283
+  port: 8285
 
 eureka:
   client:
@@ -11,9 +11,9 @@ eureka:
 ribbon:
   eureka:
     enabled: true
-spring:
- zipkin:
- base-url: http://localhost:8766
+feign:
+ hystrix:
+  enabled: true
 springfox.documentation.swagger.v2.path: /api-docs
 
 

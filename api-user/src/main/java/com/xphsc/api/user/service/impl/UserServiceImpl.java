@@ -13,6 +13,7 @@ import com.xphsc.api.user.repository.dao.UserDao;
 import com.xphsc.api.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -24,7 +25,8 @@ import java.util.List;
 public class UserServiceImpl extends BaseService<User> implements UserService {
      @Autowired
     private UserDao userDao;
-
+    @Autowired
+    RestTemplate restTemplate;
     @Override
     public PageInfo<UserDTO> listUser(BaseDTO baseDTO){
         PageHelper.startPage(baseDTO.getPageNum(), baseDTO.getPageSize());
@@ -45,5 +47,7 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
         }
         return userDTOList;
     }
+
+
 
 }

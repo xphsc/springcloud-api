@@ -45,9 +45,10 @@ public class UserController {
     }
 
     @ApiOperation(value="用户查询所有列表" )
-    @GetMapping("listAllUser")
+    @GetMapping("/listAllUser")
     public Response listAllUser(){
         List<UserDTO> result= userService.listAllUser();
         return Response.successResult(result);
     }
+
 }

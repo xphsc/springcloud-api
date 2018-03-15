@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: configserver
   client:
     registerWithEureka: true
     fetchRegistry: true
@@ -17,10 +17,5 @@ spring:
        native:
          search-locations: classpath:/config
 
-#spring:
- # cloud:
-  #  config:
-   #   server:
-    #    git:
-      #    uri: https://github.com/kbastani/spring-boot-microservice-config
+
 

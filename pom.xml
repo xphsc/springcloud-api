@@ -10,11 +10,15 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>api-eureka</module>
-        <module>api-user</module>
         <module>api-config</module>
         <module>api-gateway</module>
         <module>api-frame</module>
         <module>api-monitor</module>
+        <module>api-dashboard</module>
+        <module>api-zipkin</module>
+        <module>api-admin</module>
+        <module>api-user</module>
+
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

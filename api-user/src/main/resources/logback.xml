@@ -22,7 +22,7 @@
         </layout>
     </appender>
 
-    <logger name="com.xph" level="DEBUG">
+    <logger name="com.xphsc" level="DEBUG">
         <appender-ref ref="console" />
         <appender-ref ref="file" />
     </logger>
