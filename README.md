@@ -12,7 +12,7 @@
  - api-zipkin  链路跟踪服务
  - api-user 用户管理服务
  - api-admin 资源管理服务
- - api-generator 提供代码生成器根据表名生成对应的Model、Mapper、MapperXML、Service、ServiceImpl、Controller等基础代码,根据需求在```CodeGenerator.genController(tableName)```方法中自己选择，
+ - api-generator 提供代码生成器根据表名生成对应的Model、Mapper、MapperXML、Service、ServiceImpl、Controller等基础代码,根据需求在```CodeGenerator.genCode(tableName)```方法中自己选择，
  代码模板可根据实际项目的需求来扩展
  -使用双数据源的使用
 ```
