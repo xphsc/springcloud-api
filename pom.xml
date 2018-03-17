@@ -18,6 +18,7 @@
         <module>api-zipkin</module>
         <module>api-admin</module>
         <module>api-user</module>
+        <module>api-generator</module>
 
     </modules>
     <parent>

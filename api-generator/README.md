@@ -1,40 +1,17 @@
-## springcloud-api
+## api-generator
 ## 概述
-  ```集成的框架有spring cloud，spring boot，spring data jpa,
- api文档工具Swagger的使用
- mybatis.Mapper插件,pagehelper分页插件
- api-eureka注册中心
- api-config配置中心
- api-monitor监控中心
- api-frame 公共配置
- api-gateway 网关
- api-dashboard 负载熔断监控服务
- api-zipkin  链路跟踪服务
- api-user 用户管理服务
- api-admin 资源管理服务
- 使用双数据源的使用
-```
-## 此项目可作为spring cloud脚手架 开发使用
+  ```代码生成器 api-generatorr进行配置，主要是JDBC，因为要根据表名来生成代码
+  ```
 
 ## 开发建议
  ```
-表名，建议使用小写，多个单词使用下划线拼接
-Model内成员变量建议与表字段数量对应，
-如需扩展成员变量（比如连表查询）建议创建DTO，
-否则需在扩展的成员变量上加@Transient注解，详情见通用Mapper插件文档说明
-建议业务失败直接使用ApiException("message")抛出，由统一异常处理器来封装业务失败的响应结果，比如throw new ApiException("该手机号已被注册")，会直接被封装为{"code":1000,"message":"该手机号已被注册"}返回，无需自己处理，尽情抛出
-需要工具类的话建议先从guava中找或是我造轮子eglsc-helper
-实在没有再造轮子或引入类库，尽量精简项目
-开发规范建议遵循阿里巴巴Java开发手册（最新版下载)
-建议在公司内部使用ShowDoc、SpringFox-Swagger2 、RAP等开源项目来编写、管理API文档
-```
-## 技术选型&文档
- ```
-   spring cloud快速微服务开发框架
-    SpringBoot 快速的java开发框架，大大提高程序员的开发效率
-    MyBatis PageHelper分页插件（查看官方中文文档）
-```
-
-小弟才疏学浅
-望能和各位爱好技术伙伴相互学习与探讨
-qq群593802274
+  a. JDBC配置 在ProjectConstant项目常量，请修改为你项目的实际配置
+  b. Mapper插件基础接口的完全限定名 在ProjectConstant.MAPPER_INTERFACE_REFERENCE
+  c.根据项目修改包名路径 在CodeGenerator类中PROIECT_PACKAGE静态常量修改修改包名，比如【com.xphsc.api.user】
+  d.根据项目修改项目在硬盘上的基础路径 在CodeGenerator类中PROJECT_PATH静态常量修改代码生成器项目名称
+  ，比如【ProjectConstant.getFilePath("api-generator")+"/api-user"】，
+   api-generator代码生成器项目名称，api-user生成代码项目名称
+  e.生成service或controller层模板位置(可选)
+  在ProjectConstant项目常量类中的TEMPLATE_FILE_PATH静态常量
+  比如【ProjectConstant.getFilePath("api-generator")+"/api-generator"+ "\\src\\main\\resources\\generator\\template";】//模板位置
+  ```
