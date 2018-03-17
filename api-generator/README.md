@@ -1,20 +1,18 @@
 ## springcloud-api
 ## 概述
   ```集成的框架有spring cloud，spring boot，spring data jpa,
- - api文档工具Swagger的使用
- - mybatis.Mapper插件,pagehelper分页插件
- - api-eureka注册中心
- - api-config配置中心
- - api-monitor监控中心
- - api-frame 公共配置
- - api-gateway 网关
- - api-dashboard 负载熔断监控服务
- - api-zipkin  链路跟踪服务
- - api-user 用户管理服务
- - api-admin 资源管理服务
- - api-generator 提供代码生成器根据表名生成对应的Model、Mapper、MapperXML、Service、ServiceImpl、Controller等基础代码,根据需求在```CodeGenerator.genController(tableName)```方法中自己选择，
- 代码模板可根据实际项目的需求来扩展
- -使用双数据源的使用
+ api文档工具Swagger的使用
+ mybatis.Mapper插件,pagehelper分页插件
+ api-eureka注册中心
+ api-config配置中心
+ api-monitor监控中心
+ api-frame 公共配置
+ api-gateway 网关
+ api-dashboard 负载熔断监控服务
+ api-zipkin  链路跟踪服务
+ api-user 用户管理服务
+ api-admin 资源管理服务
+ 使用双数据源的使用
 ```
 ## 此项目可作为spring cloud脚手架 开发使用
 
