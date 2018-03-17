@@ -44,7 +44,7 @@ server:
   port: 8761
 eureka:
   instance:
-    hostname: eureka1                               # 指定当profile=eureka1时，主机名是peer1
+    hostname: eureka1                               # 指定当profile=eureka1时，主机名是eureka1
     statusPageUrlPath: /info
     healthCheckUrlPath: /health
   client:
@@ -53,7 +53,7 @@ eureka:
     fetch-registry: true
     #是否取得注册信息(配置false)
     serviceUrl:
-      defaultZone: http://eureka2:8762/eureka/      # 将自己注册到peer2这个Eureka上面去
+      defaultZone: http://eureka2:8762/eureka/      # 将自己注册到eureka2这个Eureka上面去
 
 
 spring:
