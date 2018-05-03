@@ -1,8 +1,7 @@
 package com.xphsc.api.frame.config;
 
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.*;
 import org.springframework.format.FormatterRegistry;
@@ -26,7 +25,6 @@ import javax.servlet.MultipartConfigElement;
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
-    private Logger log = LogManager.getLogger(this.getClass());
 
     @Bean
     public MultipartConfigElement multipartConfigElement() {
@@ -46,7 +44,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addFormatters(FormatterRegistry registry) {
         super.addFormatters(registry);
-        DateFormatter dateFormatter = new DateFormatter("yyyy-MM-dd HH:mm:ss");
+        DateFormatter dateFormatter = new DateFormatter("yyyy-MM-dd");
         dateFormatter.setLenient(true);
         registry.addFormatter(dateFormatter);
     }

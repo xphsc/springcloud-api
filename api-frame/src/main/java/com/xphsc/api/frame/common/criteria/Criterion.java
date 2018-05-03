@@ -7,7 +7,7 @@ import javax.persistence.criteria.Root;
 
 /**
  * 条件接口
- * Created by ${huipei.x} on 2017-2-25.
+ *  Created by ${huipei.x} on 2016/8/8.
  */
 public interface Criterion {
 	public enum Operator {  

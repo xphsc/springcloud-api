@@ -3,7 +3,7 @@ package com.xphsc.api.frame.base.impl;
 import com.github.xphsc.collect.Lists;
 import com.github.xphsc.page.Page;
 import com.github.xphsc.page.PageImpl;
-import com.vrv.vap.base.BaseRepository;
+import com.xphsc.api.frame.base.BaseRepository;
 import org.hibernate.SQLQuery;
 import org.hibernate.transform.AliasToBeanResultTransformer;
 import org.hibernate.transform.Transformers;
@@ -21,10 +21,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by ${huipei.x} on 2018/4/9.
+ * Created by ${huipei.x} on 2016/8/8.
  */
 @NoRepositoryBean
-public class BaseRepositoryImpl<T, ID extends Serializable> extends SimpleJpaRepository<T, ID> implements BaseRepository<T, ID> {
+public abstract class BaseRepositoryImpl<T, ID extends Serializable> extends SimpleJpaRepository<T, ID> implements BaseRepository<T, ID> {
 
     protected final EntityManager em;
     protected final JpaEntityInformation entityInformation;

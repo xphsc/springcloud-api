@@ -1,4 +1,24 @@
-spring:
-  application:
-    name: zipkin
+server:
+  port: 8766
+http:
+ eureka:
+  serviceUrl: xphsc
+
+eureka:
+  instance:
+     preferIpAddress: true
+     metadataMap:
+       instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    healthcheck:
+      enabled: true
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${http.eureka.serviceUrl}:8761/eureka/
+
+endpoints:
+  health:
+    sensitive: false
+
 

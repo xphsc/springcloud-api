@@ -1,4 +1,38 @@
-spring:
-  application:
-    name: gateway
+server:
+ port: 10000
+endpoints:
+restart:
+ enabled: true
+shutdown:
+ enabled: true
+health:
+ sensitive: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://xphsc:8761/eureka/
+  instance:
+    preferIpAddress: true
+
+ribbon:
+  eureka:
+    enabled: true
+
+zuul:
+ routes:
+   api-user:
+      path: /user/**
+      serviceId: user
+      sensitiveHeaders: "*"
+   intelligentsia-authority:
+        sensitiveHeaders : Authorization
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
 

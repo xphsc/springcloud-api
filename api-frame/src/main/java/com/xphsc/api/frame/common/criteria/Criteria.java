@@ -1,19 +1,20 @@
 package com.xphsc.api.frame.common.criteria;
 
 
-import java.util.List;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
 import com.github.xphsc.collect.Lists;
 import com.github.xphsc.util.StringUtil;
 import lombok.Data;
 import org.springframework.data.jpa.domain.Specification;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
+import java.util.List;
+
 /**
  * 定义一个查询条件容器
- * Created by ${huipei.x} on 2017-2-25.
+ *  Created by ${huipei.x} on 2016/8/8.
  */
 @Data
 public class Criteria<T> implements Specification<T>{

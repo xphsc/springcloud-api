@@ -13,7 +13,7 @@ import java.util.List;
  * qq群593802274
  */
 
-public abstract class BaseServiceImpl<T>  {
+public abstract class BaseServiceImpl<T>  implements BaseService<T>{
 
     @Autowired
     protected BaseMapper<T> baseMapper;

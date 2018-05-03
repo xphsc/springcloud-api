@@ -3,7 +3,7 @@ package ${basePackage}.service.impl;
 import ${basePackage}.mapper.${modelNameUpperCamel}Mapper;
 import ${basePackage}.model.${modelNameUpperCamel};
 import ${basePackage}.service.${modelNameUpperCamel}Service;
-import ${baseMapperPackage}.BaseService;
+import ${baseMapperPackage}.BaseServiceImpl;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 @Service
 @Transactional
-public class ${modelNameUpperCamel}ServiceImpl extends BaseService<${modelNameUpperCamel}> implements ${modelNameUpperCamel}Service {
+public class ${modelNameUpperCamel}ServiceImpl extends BaseServiceImpl<${modelNameUpperCamel}> implements ${modelNameUpperCamel}Service {
     @Autowired
     private ${modelNameUpperCamel}Mapper ${modelNameLowerCamel}Mapper;
 

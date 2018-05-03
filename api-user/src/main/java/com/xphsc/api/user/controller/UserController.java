@@ -22,12 +22,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/")
 @Api(tags = "/user",description="user服务测试")
-public class UserController {
+public class UserController  {
     @Autowired
     UserDao userRepository;
     @Autowired
     UserService userService;
-    @ApiOperation(value="查询" )
 
     @GetMapping("find")
     public Object find(){
@@ -50,5 +49,6 @@ public class UserController {
         List<UserDTO> result= userService.listAllUser();
         return Response.successResult(result);
     }
+
 
 }

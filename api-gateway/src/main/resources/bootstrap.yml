@@ -1,4 +1,5 @@
 spring:
-  application:
-    name: gateway
-
+ application:
+    name:  gateway
+ profiles:
+   active: dev

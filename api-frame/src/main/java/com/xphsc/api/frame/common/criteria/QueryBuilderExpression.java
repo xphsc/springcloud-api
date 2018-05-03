@@ -3,17 +3,12 @@ package com.xphsc.api.frame.common.criteria;
 import com.github.xphsc.util.StringUtil;
 import lombok.Data;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Expression;
-import javax.persistence.criteria.Path;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
+import javax.persistence.criteria.*;
 
 
 /**
  * 函数条件表达式
- * Created by ${huipei.x} on 2017-2-25.
+ *  Created by ${huipei.x} on 2016/8/8.
  */
 @Data
 public class QueryBuilderExpression implements Criterion {

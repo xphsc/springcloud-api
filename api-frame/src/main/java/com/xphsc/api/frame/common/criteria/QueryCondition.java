@@ -5,7 +5,7 @@ import java.util.Collection;
 
 /**
  * 条件构造器
- * Created by ${huipei.x} on 2017-2-25.
+ *  Created by ${huipei.x} on 2016/8/8.
  */
 public class QueryCondition {
 

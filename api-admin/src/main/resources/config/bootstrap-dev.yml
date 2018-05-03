@@ -1,9 +1,28 @@
+server:
+  port: 8285
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://xphsc:8761/eureka/
+  instance:
+    preferIpAddress: true
+
 spring:
-  application:
-    name: admin
   cloud:
     config:
-      uri: http://localhost:8888
-      profile: dev
-encrypt:
-  failOnError: false
+      profile: ${SPRING_PROFILE_ACTIVE:dev}
+      discovery:
+        enabled: true
+        serviceId: API-CONFIG
+  zipkin:
+   base-url: http://xphsc:8766
+ribbon:
+  eureka:
+    enabled: true
+feign:
+ hystrix:
+  enabled: true
+springfox.documentation.swagger.v2.path: /api-docs
+
+

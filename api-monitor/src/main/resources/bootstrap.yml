@@ -1,7 +1,5 @@
-
-info:
-  app:
-    name: "nswy-monitor"
-    description: "用于监控各个模块的运行情况"
-    version: "1.0-SNAPSHOT"
-    spring-boot-version: "1.0-SNAPSHOT"
+spring:
+ application:
+    name:  monitor
+ profiles:
+   active: dev

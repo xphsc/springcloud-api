@@ -1,21 +1,16 @@
 package com.xphsc.api.frame.common.criteria;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Expression;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
-
 import lombok.Data;
 import org.springframework.util.StringUtils;
+
+import javax.persistence.criteria.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * 逻辑条件表达式 用于复杂条件时使用，如但属性多对应值的OR查询等
- * Created by ${huipei.x} on 2017-2-25.
+ * Created by ${huipei.x} on 2016/8/8.
  */
 @Data
 public class QueryComplexExpression implements Criterion {

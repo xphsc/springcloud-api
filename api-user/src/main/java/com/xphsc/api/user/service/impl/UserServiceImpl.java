@@ -4,7 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.github.xphsc.bean.BeanByRefMapper;
 import com.github.xphsc.collect.Lists;
-import com.xphsc.api.frame.base.BaseService;
+import com.xphsc.api.frame.base.BaseServiceImpl;
 import com.xphsc.api.frame.common.util.PageInfoHelper;
 import com.xphsc.api.user.model.User;
 import com.xphsc.api.user.model.request.BaseDTO;
@@ -22,7 +22,7 @@ import java.util.List;
  * qq群593802274
  */
 @Service
-public class UserServiceImpl extends BaseService<User> implements UserService {
+public class UserServiceImpl extends BaseServiceImpl<User> implements UserService {
      @Autowired
     private UserDao userDao;
     @Autowired
@@ -31,11 +31,7 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
     public PageInfo<UserDTO> listUser(BaseDTO baseDTO){
         PageHelper.startPage(baseDTO.getPageNum(), baseDTO.getPageSize());
         List<User> userList= this.findAll();
-        PageInfo<User> pageOrig = new PageInfo(userList);
-        List<UserDTO> userDTOList= BeanByRefMapper.copyByRefListMapper(userList,UserDTO.class);
-        PageInfo<UserDTO> pageInfo = new PageInfo(userDTOList);
-        pageInfo = PageInfoHelper.getPageInfo(pageOrig, pageInfo);
-        return pageInfo;
+        return PageInfoHelper.getPageInfo(userList,UserDTO.class);
     }
 
     @Override

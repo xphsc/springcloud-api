@@ -1,3 +1,6 @@
 spring:
-  application:
-    name: dashboard
+ application:
+    name:  dashboard
+ profiles:
+   active: dev
+

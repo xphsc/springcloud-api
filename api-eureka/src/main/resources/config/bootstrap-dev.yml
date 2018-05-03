@@ -1,3 +1,13 @@
-spring:
-  application:
-    name: eurekaservicer
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: xphsc
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://xphsc:${server.port}/eureka/
+
+spring.cloud.config.discovery.enabled: true

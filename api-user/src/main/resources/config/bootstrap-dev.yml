@@ -1,10 +1,38 @@
+server:
+  port: 8283
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://xphsc:8761/eureka/
+  instance:
+     preferIpAddress: false
+     statusPageUrlPath: /info
+     healthCheckUrlPath: /health
+     lease-renewal-interval-in-seconds: 2
+     lease-expiration-duration-in-seconds: 4
+ribbon:
+  eureka:
+    enabled: true
+endpoints:
+  jmx:
+    enabled: false
 spring:
-  application:
-    name: user
   cloud:
     config:
-      uri: http://localhost:8888
-      profile: dev
+      profile: ${SPRING_PROFILE_ACTIVE:dev}
+      discovery:
+        enabled: true
+        serviceId: API-CONFIG
+  zipkin:
+   base-url: http://xphsc:8766
+springfox.documentation.swagger.v2.path: /api-docs
+
+
+
+
+
+
 encrypt:
   failOnError: false
 management:

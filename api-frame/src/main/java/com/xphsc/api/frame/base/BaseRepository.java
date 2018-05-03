@@ -6,19 +6,20 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.querydsl.QueryDslPredicateExecutor;
 import org.springframework.data.repository.NoRepositoryBean;
 import java.io.Serializable;
 import java.util.Map;
 
 
 /**
- * Created by ${huipei.x} on 2018/4/9.
+ * Created by ${huipei.x} on 2016/8/8.
  */
 @NoRepositoryBean
-public interface BaseRepository<T, ID extends Serializable> extends JpaRepository<T, ID>,JpaSpecificationExecutor<T> {
+public interface BaseRepository<T, ID extends Serializable> extends JpaRepository<T, ID>,JpaSpecificationExecutor<T>, QueryDslPredicateExecutor<T> {
 
     /**
-     *   enfOfficialsListVO 参数对象
+     *   enfOfficialsListVO 鍙傛暟瀵硅薄
      *   StringBuffer sql=new StringBuffer();
      *  sql.append(" select eo.id,eo.name,eo.sex,eo.duty,eo.certificate_number,eo.workunits,eo.idcard,eo.contactphone,r.randomdepartname,eo.departid " +
      *   "  from  (select departid,grade from org_departinformation where provinceid=18");
@@ -26,11 +27,11 @@ public interface BaseRepository<T, ID extends Serializable> extends JpaRepositor
      *  sql.append(" and cityid =" + enfOfficialsListVO.getCityid());
      *   }
      *
-     * @param resultClass 结果�?
-     * @param sql sql语句
-     * @param pageable 分页对象
-     * @param sort 排序
-     * @param clazz 查询对象
+     * @param resultClass 缁撴灉绫?
+     * @param sql sql璇彞
+     * @param pageable 鍒嗛〉瀵硅薄
+     * @param sort 鎺掑簭
+     * @param clazz 鏌ヨ瀵硅薄
      * @param <T>
      * @return
      */

@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * 函数构造器
- * Created by ${huipei.x} on 2017-2-25.
+ *  Created by ${huipei.x} on 2016/8/8.
  */
 @Data
 public class QueryConstructor {

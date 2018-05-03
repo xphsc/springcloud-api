@@ -1,5 +1,6 @@
 package com.xphsc.api.user.model;
 
+import com.querydsl.core.annotations.QueryExclude;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ import java.io.Serializable;
 @Entity
 @Table(name="T_USER")
 @Data
+@QueryExclude
 public class User implements Serializable{
 
     @Id

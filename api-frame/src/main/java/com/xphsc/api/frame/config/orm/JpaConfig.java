@@ -1,6 +1,8 @@
 package com.xphsc.api.frame.config.orm;
 
-import com.vrv.vap.base.impl.BaseRepositoryImpl;
+
+import com.xphsc.api.frame.base.impl.BaseRepositoryImpl;
+import com.xphsc.api.frame.config.datasource.DynamicDatasource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -20,7 +22,7 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 /**
- * Created by ${huipei.x} on 2018/4/9.
+ *Created by ${huipei.x} on 2016/8/8.
  */
 @Configuration
 @EnableTransactionManagement
@@ -28,13 +30,12 @@ import java.util.Properties;
         entityManagerFactoryRef="entityManagerFactory",
         transactionManagerRef="transactionManager",
         repositoryBaseClass = BaseRepositoryImpl.class,
-        basePackages= {"com.vrv.vap.*.repository.dao" })
+        basePackages= {"com.xphsc.api.*.repository.dao" })
 @EnableConfigurationProperties(HibernateProperties.class)
 public class JpaConfig {
 
     @Autowired
-    @Qualifier("dataSource")
-    private DataSource dataSource;
+    private DynamicDatasource dynamicDatasource;
     @Autowired
     private HibernateProperties hibernateProperties;
 
@@ -42,7 +43,7 @@ public class JpaConfig {
     @Primary
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() throws NamingException {
         LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
-        factoryBean.setDataSource(dataSource);
+        factoryBean.setDataSource(dynamicDatasource);
         factoryBean.setPackagesToScan(new String[] { hibernateProperties.getPackagesToScan() });
         factoryBean.setJpaVendorAdapter(jpaVendorAdapter());
         factoryBean.setJpaProperties(jpaProperties());
