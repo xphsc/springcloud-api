@@ -22,7 +22,7 @@
  ```
 ~~~
    请遵循项目规范
-    -映射数据库对象（DO) 放在业务服务项目包目录下 比如com.vrv.vap.业务服务名.model
+    -映射数据库对象（DO) 放在业务服务项目包目录下 比如com.xphsc.api.业务服务名.model
       Model内成员变量建议与表字段数量对应，
     - 表名，建议使用小写，多个单词使用下划线拼接
     -数据传输层对象（DTO,VO,BO）如需扩展成员变量（比如连表查询）建议创建DTO，
@@ -31,7 +31,7 @@
     -大量工具都在eglsc-helper中
       对象拷贝工具BeanByRefMapper
     -如果数据层使用jpa 请遵循jpa规范，使用spring-data-jpa，映射数据库对象（DO)model 在实体类上增加@Entity
-    @Table,业务数据层包规范om.vrv.vap.业务服务名.repository.dao
+    @Table,业务数据层包规范com.xphsc.api.业务服务名.repository.dao
     dao层接口需继承BaseRepository，
     -如果数据层使用hibernate 请遵循规范
      建议使用注解对应数据库映射
