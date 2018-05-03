@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: admin
+  cloud:
+    config:
+      uri: http://localhost:8888
+      profile: dev
+encrypt:
+  failOnError: false
