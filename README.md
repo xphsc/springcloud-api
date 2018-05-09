@@ -26,7 +26,7 @@
       Model内成员变量建议与表字段数量对应，
     - 表名，建议使用小写，多个单词使用下划线拼接
     -数据传输层对象（DTO,VO,BO）如需扩展成员变量（比如连表查询）建议创建DTO，
-    -如果数据层使用mybatis可以使用代码生成器（vap-generator）使用方式vap-generator项目下的md文件已详细说明
+    -如果数据层使用mybatis可以使用代码生成器（vap-generator）使用方式api-generator项目下的md文件已详细说明
     -mybatis使用Mapper插件，详情见通用Mapper插件文档说明
     -大量工具都在eglsc-helper中
       对象拷贝工具BeanByRefMapper
